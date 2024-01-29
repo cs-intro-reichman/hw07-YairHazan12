@@ -41,7 +41,7 @@ public class SpellChecker {
 	}
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
-		String similarWord = "";
+		String similarWord = word;
 		int minSimilar = threshold;
 		for (int i = 0; i < dictionary.length; i++) {
 			int lev = levenshtein(word, dictionary[i]);
