@@ -42,11 +42,13 @@ public class SpellChecker {
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
 		String similarWord = word;
-		int minSimilar = threshold;
+		int minSimilar = word.length();
 		for (int i = 0; i < dictionary.length; i++) {
 			int lev = levenshtein(word, dictionary[i]);
 			if (lev <= threshold) {
-				if (lev <= minSimilar) {
+				System.out.println(dictionary[i]);
+				if (lev < minSimilar) {
+					System.out.println(dictionary[i]);
 					minSimilar = lev;
 					similarWord = dictionary[i];
 				}
