@@ -44,7 +44,7 @@ public class SpellChecker {
 		for (int i = 0; i < dictionary.length; i++) {
 			int lev = levenshtein(word, dictionary[i]);
 			if (lev <= threshold) {
-				if (lev < minSimilar) {
+				if (lev <= minSimilar) {
 					minSimilar = lev;
 					similarWord = dictionary[i];
 				}
